@@ -6,20 +6,48 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-const onSubmitForms = function () {
-  console.log('in onSubmitForms')
-  submitForms()
+const getFormFields = require('./../../lib/get-form-fields')
+const config = require('./config')
+const store = require('./store')
+
+// res stands for response
+const signUpSuccess = function (res) {
+  // Reset the form
+  // $('#sign-up').reset()
+  $('#sign-up').trigger('reset')
+
+  console.log(res)
+
+  // Messaging
+  $('#messaging').text('Welcome, ' + res.user.email)
+}
+// err stands for error
+const signUpFailure = function (err) {
+  console.log(err)
+  $('#messaging').text('Failed with status: ' + err.status)
 }
 
-const submitForms = function () {
-  $.ajax({
+const onSubmitForms = function (event) {
+  console.log('in onSubmitForms')
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  signUp(data)
+
+    .then(signUpSuccess)
+    // Failed :(
+    .catch(signUpFailure)
+}
+
+const signUp = function (data) {
+  return $.ajax({
     method: 'POST',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/sign-up'
+    data,
+    url: config.apiUrl + '/sign-up'
   })
 }
 
 $(() => {
   // Event handlers here
-  $('#button').on('click', onSubmitForms)
+  $('#sign-up').on('submit', onSubmitForms)
   console.log()
 })
