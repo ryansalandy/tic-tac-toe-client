@@ -15,12 +15,11 @@ const signUpSuccess = function (res) {
   // Reset the form
   // $('#sign-up').reset()
   $('#sign-up').trigger('reset')
-
   console.log(res)
-
   // Messaging
   $('#messaging').text('Welcome, ' + res.user.email)
 }
+
 // err stands for error
 const signUpFailure = function (err) {
   console.log(err)
