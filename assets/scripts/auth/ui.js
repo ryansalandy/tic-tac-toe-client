@@ -25,9 +25,9 @@ const signInSuccess = function (response) {
 
   $('#messaging').text('Signed in Successfully')
 
-  // $('#after-sign-in').show()
-  //
-  // $('#before-sign-in').hide()
+  $('#after-sign-in').show()
+
+  $('#before-sign-in').hide()
 }
 
 const signInFailure = function (err) {
@@ -35,9 +35,31 @@ const signInFailure = function (err) {
 }
 // End of Sign in Success and Failure
 
+const changePasswordSuccess = function () {
+  $('#change-password').trigger('reset')
+  $('#messaging').text('Changed password successfully!')
+}
+
+const changePasswordFailure = function () {
+  $('#messaging').text('Change password failed :/')
+}
+
+const signOutSuccess = function () {
+  store.user = null
+  $('#messaging').text('Signed out successfully. Goodbye!')
+}
+
+const signOutFailure = function () {
+  $('#messaging').text('Sign up failed :(')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
+  signOutSuccess,
+  signOutFailure
 }
