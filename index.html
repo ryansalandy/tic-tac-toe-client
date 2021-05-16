@@ -20,30 +20,32 @@
             <input name="credentials[email]" required type="email" placeholder="Email Address"/>
             <input name="credentials[password]" required type="password" placeholder="Password"/>
             <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again"/>
-            <button type="submit">Submit</button>
+            <button type="submit">Sign Up</button>
           </form>
-        <h2 id="messaging"></h2>
       </section>
 
       <section>
         <h3>Sign In</h3>
         <form id="sign-in">
-          <input name="credentials[email]" type="text" value="an@example.email">
-          <input name="credentials[password]" type="password" value="an example password">
-          <button type="submit">Submit</button>
+          <input name="credentials[email]" required type="email" placeholder="email">
+          <input name="credentials[password]" required type="password" placeholder="password">
+          <button type="submit">Sign In</button>
         </form>
       </section>
 
       <section>
         <h3>Change Password</h3>
         <form id="change-password">
-          <input name="passwords[old]" type="password">
-          <input name="passwords[new]" type="password">
+          <input name="passwords[old]" type="password" placeholder="Old Password">
+          <input name="passwords[new]" type="password" placeholder="New Password">
           <button type="submit">Submit</button>
         </form>
     </section>
 
     <button id="sign-out">Sign Out</button>
+    <section>
+      <p id="messaging"></p>
+    </section>
 
     </body>
 </html>
