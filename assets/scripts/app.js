@@ -7,6 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
+const gameEvents = require('./game/events')
 
 $(() => {
   // Event handlers here
@@ -14,4 +15,6 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
+  // Game Event handlers
+  $('#new-game').on('click', gameEvents.onNewGame)
 })

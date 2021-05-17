@@ -47,10 +47,23 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   store.user = null
   $('#messaging').text('Signed out successfully. Goodbye!')
+
+  $('#before-sign-in').show()
+
+  $('#after-sign-in').hide()
 }
 
 const signOutFailure = function () {
   $('#messaging').text('Sign up failed :(')
+}
+
+const newGameSuccess = function () {
+  $('#new-game').trigger('reset')
+  $('#messaging').text('Lets Play!')
+}
+
+const newGameFailure = function () {
+  $('#messaging').text('New game failed :/')
 }
 
 module.exports = {
@@ -61,5 +74,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  newGameSuccess,
+  newGameFailure
 }

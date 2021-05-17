@@ -1,5 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 section {
-  padding: 25px 0 25px 50px;
+  padding: 12px 0 12px 50px;
+}
+
+button {
+  padding: 5px;
 }
