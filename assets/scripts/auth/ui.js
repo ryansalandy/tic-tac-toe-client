@@ -31,7 +31,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (err) {
-  $('#messaging').text('Failed with error ', err)
+  $('#messaging').text('Sing in failed ', err)
 }
 // End of Sign in Success and Failure
 

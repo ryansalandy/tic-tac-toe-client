@@ -14,6 +14,17 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
+const onGamePlay = function (event) {
+  event.preventDefault()
+
+  const callIndex = $(event.target).data('cell-index')
+
+  api.gamePlay(callIndex)
+    .then(ui.gamePlaySuccess)
+    .catch(ui.gamePlayFailure)
+}
+
 module.exports = {
-  onNewGame
+  onNewGame,
+  onGamePlay
 }

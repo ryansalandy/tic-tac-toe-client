@@ -7,6 +7,11 @@ const newGameSuccess = function (res) {
   $('#messaging').text('New Game!')
 }
 
+const gamePlaySuccess = function (res) {
+  $('.board-cell').trigger('reset')
+}
+
 module.exports = {
-  newGameSuccess
+  newGameSuccess,
+  gamePlaySuccess
 }

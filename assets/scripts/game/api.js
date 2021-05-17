@@ -14,6 +14,18 @@ const newGame = function (data) {
   })
 }
 
+const gamePlay = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games/:id',
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
-  newGame
+  newGame,
+  gamePlay
 }
