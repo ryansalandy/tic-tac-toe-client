@@ -17,5 +17,5 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
   // Game Event handlers
   $('#new-game').on('click', gameEvents.onNewGame)
-  $('.board-cell').on('click', gameEvents.onGamePlay)
+  $('.box').on('click', gameEvents.onGamePlay)
 })
