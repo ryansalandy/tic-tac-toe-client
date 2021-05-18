@@ -15,8 +15,9 @@ const newGame = function (data) {
 }
 
 const gamePlay = function (data) {
+  const gameId = store.game._id
   return $.ajax({
-    url: config.apiUrl + '/games/:id',
+    url: config.apiUrl + '/games/' + gameId,
     method: 'PATCH',
     data,
     headers: {
