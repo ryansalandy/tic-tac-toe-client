@@ -14,12 +14,20 @@ const newGame = function (data) {
   })
 }
 
-const gamePlay = function (data) {
+const gamePlay = function (cellIndex) {
   const gameId = store.game._id
   return $.ajax({
     url: config.apiUrl + '/games/' + gameId,
     method: 'PATCH',
-    data,
+    data: {
+      game: {
+        cell: {
+          index: cellIndex,
+          value: 'x'
+        },
+        over: false
+      }
+    },
     headers: {
       Authorization: `Bearer ${store.user.token}`
     }
