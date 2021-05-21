@@ -7,11 +7,11 @@ const newGameSuccess = function (res) {
   $('#new-game').trigger('reset')
   console.log(res)
 
-  $('#messaging').text('New Game!')
+  $('#messaging').text('Its Your Turn X!')
 }
 
 const gamePlaySuccess = function (res) {
-  $('.box').trigger('reset')
+  // $('.box').trigger('reset')
 }
 
 module.exports = {

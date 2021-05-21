@@ -2,7 +2,7 @@
 
 const store = require('./../store')
 
-// Start of Sign up Success and Failure
+// Sign up begin
 const signUpSuccess = function (res) {
   $('#sign-up').trigger('reset')
   console.log(res)
@@ -15,9 +15,9 @@ const signUpFailure = function (err) {
 
   $('#messaging').text('Failed with status: ' + err.status)
 }
-// End of Sign up Success and Failure
+// Sign up end
 
-// Start of Sign in Success and Failure
+// Sign in begin
 const signInSuccess = function (response) {
   $('#sign-in').trigger('reset')
   console.log(response)
@@ -31,19 +31,20 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (err) {
-  $('#messaging').text('Sing in failed ', err)
+  $('#messaging').text('Sign in failed ', err)
 }
-// End of Sign in Success and Failure
+// Sign in end
 
-const changePasswordSuccess = function () {
-  $('#change-password').trigger('reset')
-  $('#messaging').text('Changed password successfully!')
-}
+// const changePasswordSuccess = function () {
+//   $('#change-password').trigger('reset')
+//   $('#messaging').text('Changed password successfully!')
+// }
+//
+// const changePasswordFailure = function () {
+//   $('#messaging').text('Change password failed :/')
+// }
 
-const changePasswordFailure = function () {
-  $('#messaging').text('Change password failed :/')
-}
-
+// Sign out begin
 const signOutSuccess = function () {
   store.user = null
   $('#messaging').text('Signed out successfully. Goodbye!')
@@ -56,25 +57,26 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#messaging').text('Sign up failed :(')
 }
+// Sign out end
 
-const newGameSuccess = function () {
-  $('#new-game').trigger('reset')
-  $('#messaging').text('Lets Play!')
-}
-
-const newGameFailure = function () {
-  $('#messaging').text('New game failed :/')
-}
+// const newGameSuccess = function () {
+//   // $('#new-game').trigger('reset')
+//   $('#messaging').text('Lets Play!')
+// }
+//
+// const newGameFailure = function () {
+//   $('#messaging').text('New game failed :/')
+// }
 
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
-  changePasswordSuccess,
-  changePasswordFailure,
+  // changePasswordSuccess,
+  // changePasswordFailure,
   signOutSuccess,
-  signOutFailure,
-  newGameSuccess,
-  newGameFailure
+  signOutFailure
+  // newGameSuccess,
+  // newGameFailure
 }

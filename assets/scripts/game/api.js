@@ -14,7 +14,7 @@ const newGame = function (data) {
   })
 }
 
-const gamePlay = function (cellIndex) {
+const gamePlay = function (cellIndex, cellValue, endGame) {
   const gameId = store.game._id
   return $.ajax({
     url: config.apiUrl + '/games/' + gameId,
@@ -23,9 +23,9 @@ const gamePlay = function (cellIndex) {
       game: {
         cell: {
           index: cellIndex,
-          value: 'x'
+          value: cellValue
         },
-        over: false
+        over: endGame
       }
     },
     headers: {
