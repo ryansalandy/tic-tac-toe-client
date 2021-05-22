@@ -5,15 +5,12 @@ const store = require('./../store')
 // Sign up begin
 const signUpSuccess = function (res) {
   $('#sign-up').trigger('reset')
-  console.log(res)
 
-  $('#messaging').text('Welcome, ' + res.user.email)
+  $('#messaging').text('Please sign in with, ' + res.user.email)
 }
 
 const signUpFailure = function (err) {
-  console.log(err)
-
-  $('#messaging').text('Failed with status: ' + err.status)
+  $('#messaging').text('Failed, passwords not a match: ' + err.status)
 }
 // Sign up end
 
@@ -31,7 +28,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (err) {
-  $('#messaging').text('Sign in failed ', err)
+  $('#messaging').text('Sign in failed, check email and password ', err)
 }
 // Sign in end
 
@@ -55,18 +52,9 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  $('#messaging').text('Sign up failed :(')
+  $('#messaging').text('Sign out failed :(')
 }
 // Sign out end
-
-// const newGameSuccess = function () {
-//   // $('#new-game').trigger('reset')
-//   $('#messaging').text('Lets Play!')
-// }
-//
-// const newGameFailure = function () {
-//   $('#messaging').text('New game failed :/')
-// }
 
 module.exports = {
   signUpSuccess,
@@ -77,6 +65,4 @@ module.exports = {
   // changePasswordFailure,
   signOutSuccess,
   signOutFailure
-  // newGameSuccess,
-  // newGameFailure
 }

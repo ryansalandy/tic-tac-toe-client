@@ -14,18 +14,17 @@ const newGame = function (data) {
   })
 }
 
-const gamePlay = function (cellIndex, cellValue, endGame) {
-  const gameId = store.game._id
+const gamePlay = function (index) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameId,
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
     data: {
       game: {
         cell: {
-          index: cellIndex,
-          value: cellValue
+          index: `${index}`,
+          value: `${store.currentPlayer}`
         },
-        over: endGame
+        over: false
       }
     },
     headers: {

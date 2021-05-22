@@ -10,12 +10,13 @@ const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
 
 $(() => {
-  // Form handlers here
+  // Form event handler functions here
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   // $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
-  // Game Event handlers
+
+  // Game event handler functions here
   $('#new-game').on('click', gameEvents.onNewGame)
   $('.box').on('click', gameEvents.onGamePlay)
 })

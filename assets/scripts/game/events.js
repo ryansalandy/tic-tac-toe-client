@@ -5,12 +5,12 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('./../store')
 
+store.playerOne = 'X'
+
 const onNewGame = function (event) {
   event.preventDefault()
-
-  // const data = getFormFields(event.target)
-
-  api.newGame() // removed data in par.
+  $('.game-board').trigger('reset')
+  api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
 }
@@ -18,11 +18,12 @@ const onNewGame = function (event) {
 const onGamePlay = function (event) {
   event.preventDefault()
 
-  const endGame = store.endGame
-
   const callIndex = $(event.target).data('cell-index')
+  // const endGame = store.endGame
+  const textValue = event.target.innerText
+  if (textValue) return
 
-  api.gamePlay(callIndex, endGame)
+  api.gamePlay(callIndex)
     .then(ui.gamePlaySuccess)
     .catch(ui.gamePlayFailure)
 }
