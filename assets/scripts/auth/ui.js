@@ -17,7 +17,6 @@ const signUpFailure = function (err) {
 // Sign in begin
 const signInSuccess = function (response) {
   $('#sign-in').trigger('reset')
-  console.log(response)
   store.user = response.user
 
   $('#messaging').text('Signed in Successfully')
