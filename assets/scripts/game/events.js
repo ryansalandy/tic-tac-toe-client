@@ -26,10 +26,6 @@ const onGamePlay = function (event) {
   const textValue = event.target.innerText
   if (textValue) return
   box.text(store.currentPlayer)
-  // const box = $(event.target).data('cell-index')
-  // const textValue = event.target.innerText
-  // if (textValue) return
-  // boxt.text(store.currentPlayer)
 
   api.gamePlay(index)
     .then(ui.gamePlaySuccess)
