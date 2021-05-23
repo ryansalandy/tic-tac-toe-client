@@ -7,23 +7,31 @@ const store = require('./../store')
 
 store.playerOne = 'X'
 
+// New game button event handler function
 const onNewGame = function (event) {
   event.preventDefault()
-  $('.game-board').trigger('reset')
+  $('.container').trigger('reset')
+
   api.newGame()
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
 }
 
+// Game play event handler function
 const onGamePlay = function (event) {
   event.preventDefault()
 
-  const callIndex = $(event.target).data('cell-index')
-  // const endGame = store.endGame
+  const box = $(event.target)
+  const index = box.data('cell-index')
   const textValue = event.target.innerText
   if (textValue) return
+  box.text(store.currentPlayer)
+  // const box = $(event.target).data('cell-index')
+  // const textValue = event.target.innerText
+  // if (textValue) return
+  // boxt.text(store.currentPlayer)
 
-  api.gamePlay(callIndex)
+  api.gamePlay(index)
     .then(ui.gamePlaySuccess)
     .catch(ui.gamePlayFailure)
 }
