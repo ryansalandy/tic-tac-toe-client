@@ -19,4 +19,4 @@ in the top left hand corner. New Game will clear the board for a new game.
 
 ### Wireframe
 
-![wireframe](https://ryansalandy.github.io/tic-tac-toe-client/img/IMG_0830.JPG)
+![wireframe](img/IMG_0830.JPG)
