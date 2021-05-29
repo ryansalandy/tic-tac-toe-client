@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap'; // @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
+@import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Source+Code+Pro:wght@900&display=swap');
 
 button,
@@ -13,7 +13,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   position: relative;
-  background-image: url("../../../img/tttbg.jpg");
+  background-image: url("./../../img/ttt-bg.jpg");
   background-position: top;
 }
 
@@ -46,8 +46,6 @@ p {
 
 section {
   width: 100%;
-  // height: 50px;
-  // padding-top: 70px;
   padding-bottom: 16px;
   display: flex;
   flex-flow: row wrap;
@@ -122,24 +120,6 @@ section {
   margin: 24px auto;
   border: solid black;
 }
-
-// .btn btn-secondary {
-//   width: 100px;
-//   font-weight: bold;
-//   font-size: 14px;
-//   margin: 0px auto;
-//   padding: 2px;
-//   border: none;
-// }
-
-// .btn-2 {
-//   width: 100px;
-//   font-weight: bold;
-//   font-size: 14px;
-//   margin: 0px auto;
-//   padding: 2px;
-//   border: solid black;
-// }
 
 .no-show {
   display: none;
