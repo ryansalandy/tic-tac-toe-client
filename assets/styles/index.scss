@@ -13,7 +13,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   position: relative;
-  background-image: url("img/tttbg.jpg");
+  background-image: url("./../../../img/tttbg.jpg");
   background-position: top;
 }
 
@@ -123,12 +123,23 @@ section {
   border: solid black;
 }
 
-.btn-2 {
-  width: 150px;
-  font-size: 14px;
-  margin: 4px auto;
-  border: solid black;
-}
+// .btn btn-secondary {
+//   width: 100px;
+//   font-weight: bold;
+//   font-size: 14px;
+//   margin: 0px auto;
+//   padding: 2px;
+//   border: none;
+// }
+
+// .btn-2 {
+//   width: 100px;
+//   font-weight: bold;
+//   font-size: 14px;
+//   margin: 0px auto;
+//   padding: 2px;
+//   border: solid black;
+// }
 
 .no-show {
   display: none;
