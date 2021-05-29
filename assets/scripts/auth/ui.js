@@ -31,15 +31,6 @@ const signInFailure = function (err) {
 }
 // Sign in end
 
-// const changePasswordSuccess = function () {
-//   $('#change-password').trigger('reset')
-//   $('#messaging').text('Changed password successfully!')
-// }
-//
-// const changePasswordFailure = function () {
-//   $('#messaging').text('Change password failed :/')
-// }
-
 // Sign out begin
 const signOutSuccess = function () {
   store.user = null
@@ -60,8 +51,6 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
-  // changePasswordSuccess,
-  // changePasswordFailure,
   signOutSuccess,
   signOutFailure
 }

@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Ryan's Tic Tac Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Ryan's Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <section>
-        <h1>Tic Tac Toe</h1>
-        <span id="messaging">Sign In to Start New Game</span>
-      </section>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <section id="before-sign-in">
-        <section>
-            <form id="sign-up">
-              <input name="credentials[email]" required type="email" placeholder="Email Address"/>
-              <input name="credentials[password]" required type="password" placeholder="Password"/>
-              <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again"/>
-              <button type="submit" class="btn-2">Sign Up</button>
-            </form>
-        </section>
+<body>
 
-        <section>
-          <form id="sign-in">
-            <input name="credentials[email]" required type="email" placeholder="email">
-            <input name="credentials[password]" required type="password" placeholder="password">
-            <button type="submit" class="btn-2">Sign In</button>
-          </form>
-        </section>
-      </section>
+  <header>
+    <h1>Tic Tac Toe</h1><br />
+  </header>
 
-      <section id="after-sign-in" class="no-show">
-        <!-- <section>
-          <form id="change-password">
-            <input name="passwords[old]" type="password" placeholder="Old Password">
-            <input name="passwords[new]" type="password" placeholder="New Password">
-            <button type="submit" class="btn-2">Change Password</button>
-          </form>
-        </section> -->
+  <p id="messaging">Sign In to Start New Game</p>
+  <section id="before-sign-in">
+    <h3>Sign Up</h3>
+    <section>
+      <form id="sign-up">
+        <input name="credentials[email]" required type="email" placeholder="Email Address" />
+        <input name="credentials[password]" required type="password" placeholder="Password" />
+        <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
+        <button type="submit" class="btn-2">Sign Up</button>
+      </form>
+    </section>
+    <h3>Sign In</h3>
+    <section>
+      <form id="sign-in">
+        <input name="credentials[email]" required type="email" placeholder="email">
+        <input name="credentials[password]" required type="password" placeholder="password">
+        <button type="submit" class="btn-2">Sign In</button>
+      </form>
+    </section>
+  </section>
 
-        <div id="after-new-game" class="no-show">
-          <div class="container">
-              <div class="box" style="border-left: 0; border-top: 0" data-cell-index='0'></div>
-              <div class="box" style="border-top: 0" data-cell-index='1'></div>
-              <div class="box" style="border-top: 0; border-right: 0" data-cell-index='2'></div>
-              <div class="box" style="border-left: 0" data-cell-index='3'></div>
-              <div class="box" data-cell-index='4'></div>
-              <div class="box" style="border-right: 0" data-cell-index='5'></div>
-              <div class="box" style="border-left: 0; border-bottom: 0" data-cell-index='6'></div>
-              <div class="box" style="border-bottom: 0" data-cell-index='7'></div>
-              <div class="box" style="border-right: 0; border-bottom: 0" data-cell-index='8'></div>
-          </div>
+  <div id="after-sign-in" class="no-show">
+    <div id="after-new-game" class="no-show">
+      <div class="container">
+        <div class="box" id="1" data-cell-index='0'></div>
+        <div class="box" id="2" data-cell-index='1'></div>
+        <div class="box" id="3" data-cell-index='2'></div>
+        <div class="box" id="4" data-cell-index='3'></div>
+        <div class="box" id="5" data-cell-index='4'></div>
+        <div class="box" id="6" data-cell-index='5'></div>
+        <div class="box" id="7" data-cell-index='6'></div>
+        <div class="box" id="8" data-cell-index='7'></div>
+        <div class="box" id="9" data-cell-index='8'></div>
       </div>
+    </div>
+    <button id="new-game" class="btn">New Game</button>
+    <button id="sign-out" class="btn">Sign Out</button>
+  </div>
+  <div id="footer">
+    <span>Thank you for playing</span>
+  </div>
+</body>
 
-        <button id="new-game" class="btn">New Game</button>
-        <button id="sign-out" class="btn">Sign Out</button>
-      </section>
-
-    </body>
 </html>
