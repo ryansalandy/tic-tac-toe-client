@@ -29,7 +29,7 @@ const gamePlaySuccess = function (res) {
 
   // Start Horizontal Wins for X or O
   if (store.game.cells[0] === 'X' && store.game.cells[1] === 'X' && store.game.cells[2] === 'X') {
-    $('#game-message').text('X WINS!!!')
+    $('#messaging').text('X WINS!!!')
     $('.container').hide()
   } else if (store.game.cells[0] === 'O' && store.game.cells[1] === 'O' && store.game.cells[2] === 'O') {
     $('#messaging').text('O WINS!!!')
